@@ -1,0 +1,107 @@
+header
+  @extend .wrap-padding-width
+  letter-spacing: 1.5px
+  text-transform: uppercase
+  @media screen and (max-width: $tablet)
+    background: none
+    padding-top: 2em
+
+  section
+    @include grid-container
+    &:last-of-type
+      margin-top: 2em
+      text-transform: initial
+
+
+
+.logo
+  @include grid-column(3)
+  @media screen and (max-width: $mobile)
+    @include grid-column(12)
+    text-align: center
+  img
+    @include size(2em)
+  span
+    @include position(relative, -8px null null .5em)
+    @extend .logo-link
+
+.logo-link
+  text-transform: uppercase
+  font-size: .75rem
+  font-weight: 700
+
+.menu
+  @include grid-column(9)
+  @media screen and (max-width: $mobile)
+    margin: 2em 0 0 0
+    width: 100%
+  ul
+    float: right
+    list-style: none
+    margin: 0
+    padding: 0
+    @media screen and (max-width: $mobile)
+      float: none
+      text-align: center
+    li
+      display: inline-block
+      float: left
+      margin-right: 2em
+      &:last-of-type
+        margin-right: 0
+      @media screen and (max-width: $mobile)
+        float: none
+        margin-right: 1em
+      a
+        @extend .logo-link
+        &:hover
+          color: $color-aqua
+
+.banner
+  @extend .wrap-padding-width
+  background: url("/assets/images/back-header.svg")
+  background-repeat: repeat-y
+  background-position: right
+  display: table
+  margin: 4em 0
+  .greeting
+    @include margin(5em null null)
+    @include grid-column(6)
+
+    @media screen and (max-width: $mobile)
+      @include grid-column(12)
+
+    p
+      text-transform: initial
+      font-size: 1.2em
+      margin-bottom: 2em
+
+  .me-img
+    @include grid-column(6)
+
+    @media screen and (max-width: $mobile)
+      @include grid-column(12)
+    svg
+      position: relative
+      height: 30em
+      display: block
+      margin: 0 auto
+      @media screen and (max-width: $tablet)
+        position: initial
+        top: 75px
+        height: auto
+      @media screen and (max-width: $desktop)
+        top: 36px
+      .closed-eyes
+        @include prefixer(animation, blink 5s infinite, ("webkit", "moz"))
+
+      .open-eyes
+        @include prefixer(animation, open 5s infinite, ("webkit", "moz"))
+        height: 30px
+        width: 30px
+        .eye
+          position: relative
+          height: 30px
+          width: 30px
+          .eye-pupil
+            position: absolute
