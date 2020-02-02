@@ -1,6 +1,6 @@
 # natsoares-personal-website
 
-This is Natalia Soares personal website in Jekyll.
+This is my personal website in Jekyll.
 
 ## Setup the project
 
