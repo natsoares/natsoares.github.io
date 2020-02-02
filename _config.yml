@@ -1,3 +1,16 @@
+title: Natalia Soares &#8226; UI/UX Designer
+email: hello@natisoares.com
+description: UI/UX Designer passionate about responsive, accessible websites and illustrations.
+baseurl: "/"
+url: "http://natisoares.com"
+
+theme: minima
+plugins:
+  - jekyll-feed
+
+include:
+  - netlify.toml
+
 sass:
   sass_dir: assets/stylesheets
   style: compressed

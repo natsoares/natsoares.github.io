@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Natalia Soares &#8226; UX/UI Designer
 ---
 
 <section class="banner">
