@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-gemspec
 gem "jekyll", "~> 4.0.0"
 gem "minima", "~> 2.5"
 # gem "github-pages", group: :jekyll_plugins
