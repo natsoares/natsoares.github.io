@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')
 
-$font-default: 'Lato', sans-serif
+$font-default: 'Lato', Arial, Helvetica, sans-serif
 
 *
+  -webkit-font-smoothing: antialiased
   font-family: $font-default
+  font-smoothing: antialiased
   font-weight: 400
 
 h1, h2, h3, h4, h5, h6
@@ -15,8 +17,9 @@ h1, h2, h3, h4, h5, h6
   text-transform: capitalize
 
 .paragraph
-    font-size: 1.25em
-    line-height: 1.5em
+    font-size: 1.2em
+    line-height: 1.6em
+    margin: 1em 0
 
 a
   color: $black
