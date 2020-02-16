@@ -5,7 +5,7 @@ $portfolio-blockheight: 20em
     align-items: flex-start
     display: flex
     flex-flow: column wrap
-    justify-content: space-between
+    justify-content: normal
     max-height: calc(#{$portfolio-blockheight} * 3 + 5em)
 
     &-img
@@ -28,3 +28,16 @@ $portfolio-blockheight: 20em
         margin: 0 auto 20px
         padding: 2em
         width: 80%
+
+.portfolio-internal
+    @extend .container
+    align-items: flex-start
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    &-col
+        width: 45%
+
+    &-img
+        width: 100%
