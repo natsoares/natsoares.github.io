@@ -7,9 +7,15 @@ $portfolio-blockheight: 20em
     justify-content: normal
     max-height: calc(#{$portfolio-blockheight} * 3 + 5em)
 
+    @media screen and (max-width: $mobile)
+        max-height: fit-content
+
     &-img
         height: $portfolio-blockheight
         width: 50%
+        
+        @media screen and (max-width: $mobile)
+            width: 100%
 
         .access
             background: red
@@ -25,10 +31,20 @@ $portfolio-blockheight: 20em
         padding: 2em
         width: 80%
 
+        @media screen and (max-width: $mobile)
+            width: 65%
+
 .portfolio-home
     flex-flow: column wrap
+
+    @media screen and (max-width: $mobile)
+        flex-flow: column
+
     .portfolio-img:first-of-type
         height: calc(#{$portfolio-blockheight}  * 2)
+
+        @media screen and (max-width: $mobile)
+            height: $portfolio-blockheight
 
 .portfolio-internal
     @extend .container
