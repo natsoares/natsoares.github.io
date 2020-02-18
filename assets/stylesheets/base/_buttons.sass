@@ -2,7 +2,9 @@
     @extend .container
     display: table
     margin: 2em auto
-    width: 100%
+
+    @media screen and (max-width: $mobile)
+        width: 100%
 
     .btn-simple
         float: right
