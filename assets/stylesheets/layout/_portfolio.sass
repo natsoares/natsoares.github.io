@@ -4,16 +4,12 @@ $portfolio-blockheight: 20em
     @extend .container
     align-items: flex-start
     display: flex
-    flex-flow: column wrap
     justify-content: normal
     max-height: calc(#{$portfolio-blockheight} * 3 + 5em)
 
     &-img
         height: $portfolio-blockheight
         width: 50%
-
-        &:first-of-type
-            height: calc(#{$portfolio-blockheight}  * 2)
 
         .access
             background: red
@@ -29,12 +25,25 @@ $portfolio-blockheight: 20em
         padding: 2em
         width: 80%
 
+.portfolio-home
+    flex-flow: column wrap
+    .portfolio-img:first-of-type
+        height: calc(#{$portfolio-blockheight}  * 2)
+
 .portfolio-internal
     @extend .container
     align-items: flex-start
     display: flex
     flex-flow: row wrap
     justify-content: space-between
+
+    &-full,
+    &-col
+        margin: 2em 0
+
+    &-full
+        display: block
+        width: 100%
 
     &-col
         width: 45%
