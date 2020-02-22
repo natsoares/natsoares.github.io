@@ -1,11 +1,10 @@
-$portfolio-blockheight: 20em
+$portfolio-blockheight: 25em
 
 .portfolio
     @extend .container
     align-items: flex-start
     display: flex
     justify-content: normal
-    max-height: calc(#{$portfolio-blockheight} * 3 + 5em)
 
     @media screen and (max-width: $mobile)
         max-height: fit-content
@@ -18,6 +17,9 @@ $portfolio-blockheight: 20em
     
     &-leadwise
         background: url('/assets/images/portfolio/leadwise/portfolio-leadwise-thumbnail.jpg')
+
+    &-mpce
+        background: url('/assets/images/portfolio/mpce/portfolio-mpce-thumbnail.jpg')
 
     &-img
         background-position: center
@@ -48,6 +50,7 @@ $portfolio-blockheight: 20em
 
 .portfolio-home
     flex-flow: column wrap
+    max-height: calc(#{$portfolio-blockheight} * 2 + 5em)
 
     @media screen and (max-width: $mobile)
         flex-flow: column

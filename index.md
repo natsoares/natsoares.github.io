@@ -4,4 +4,4 @@ layout: default
 
 {% include sections/banner.html %}
 
-{% include sections/portfolio.html %}
+{% include sections/home-portfolio.html %}
