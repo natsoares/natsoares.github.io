@@ -11,26 +11,26 @@ $portfolio-blockheight: 20em
         max-height: fit-content
 
     &-impulso
-        background: url('/assets/images/portfolio/impulso/portfolio-impulso-04.jpg')
-        background-size: cover
+        background: url('/assets/images/portfolio/impulso/portfolio-impulso-thumbnail.jpg')
     
     &-boletosimples
-        background: url('/assets/images/portfolio/boletosimples/portfolio-boletosimples-00.png')
-        background-size: cover
+        background: url('/assets/images/portfolio/boletosimples/portfolio-boletosimples-thumbnail.jpg')
     
     &-leadwise
-        background: url('/assets/images/portfolio/leadwise/portfolio-leadwise-00.jpg')
-        background-size: cover
+        background: url('/assets/images/portfolio/leadwise/portfolio-leadwise-thumbnail.jpg')
 
     &-img
+        background-position: center
+        background-size: cover
         height: $portfolio-blockheight
         width: 50%
+        
         
         @media screen and (max-width: $mobile)
             width: 100%
 
         .access
-            background: rgba(0, 0, 0, .15)
+            // background: rgba(0, 0, 0, .15)
             display: flex
             height: 100%
 
