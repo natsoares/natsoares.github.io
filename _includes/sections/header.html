@@ -1,7 +1,11 @@
 <header id="home">
-    <ul class="menu">
-        <li><a class="scroll-link" data-soffset="30" href="#portfolio">Work</a></li>
-        <li><a class="logo-link" data-soffset="30" href="/"><img src="/assets/images/logo/nati-soares.svg" alt="Nati Soares"></a></li>
-        <li><a class="scroll-link" data-soffset="30" href="#contact">Contact</a></li>
-    </ul>
+  <ul class="menu">
+    {% if page.location == "home" %}
+      <li><a class="scroll-link" data-soffset="30" href="#portfolio">Work</a></li>
+      {% elsif page.location == "portfolio" %}
+      <li><a class="scroll-link" data-soffset="30" href="/portfolio">Work</a></li>
+    {% endif %}
+    <li><a class="logo-link" data-soffset="30" href="/"><img src="/assets/images/logo/nati-soares.svg" alt="Nati Soares"></a></li>
+    <li><a class="scroll-link" data-soffset="30" href="#contact">Contact</a></li>
+  </ul>
 </header>

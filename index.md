@@ -1,5 +1,6 @@
 ---
 layout: default
+location: home
 ---
 
 {% include sections/banner.html %}
