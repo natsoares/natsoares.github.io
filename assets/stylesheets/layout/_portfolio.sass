@@ -28,7 +28,7 @@ $portfolio-blockheight: 25em
         width: 50%
         
         
-        @media screen and (max-width: $mobile)
+        @media screen and (max-width: $tablet)
             width: 100%
 
         .access
@@ -52,8 +52,9 @@ $portfolio-blockheight: 25em
     flex-flow: column wrap
     max-height: calc(#{$portfolio-blockheight} * 2 + 5em)
 
-    @media screen and (max-width: $mobile)
-        flex-flow: column
+    @media screen and (max-width: $tablet)
+        max-height: fit-content
+        flex-flow: column        
 
     .portfolio-img:first-of-type
         height: calc(#{$portfolio-blockheight}  * 2)
