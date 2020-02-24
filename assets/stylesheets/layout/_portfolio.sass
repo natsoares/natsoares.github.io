@@ -1,98 +1,84 @@
+$portfolio-blockheight: 25em
+
 .portfolio
-  @include grid-container
-  @extend .wrap-margin-width
-  margin-top: 10em
-  @media screen and (max-width: $mobile)
-    margin-top: 5em
-  h4
-    margin-bottom: 1em
-  .portfolio-intro
-    text-align: center
+    @extend .container
+    align-items: flex-start
+    display: flex
+    justify-content: normal
 
-  section
-    @include grid-column(6)
-    @include prefixer(box-shadow, 5px 5px 20px 0px rgba(0,0,0,0.15), ("webkit", "moz"))
-    border-radius: 10px
-    margin-top: 2em
     @media screen and (max-width: $mobile)
-      @include grid-column(12)
+        max-height: fit-content
 
-    .access
-      display: block
-      padding: 2em
-      position: relative
-      height: 10em
-      font-size: .9em
-      @media screen and (max-width: $tablet)
-        height: auto
-      &:hover>.plus
-        background: $color-dark-bg
-        color: white
+    &-impulso
+        background: url('/assets/images/portfolio/impulso/portfolio-impulso-thumbnail.jpg')
+    
+    &-boletosimples
+        background: url('/assets/images/portfolio/boletosimples/portfolio-boletosimples-thumbnail.jpg')
+    
+    &-leadwise
+        background: url('/assets/images/portfolio/leadwise/portfolio-leadwise-thumbnail.jpg')
 
-    p
-      margin-bottom: 2em
-      width: 80%
-      &:first-of-type
-        font-weight: 700
-        letter-spacing: 3px
-      &:last-of-type
-        margin-bottom: 0
+    &-mpce
+        background: url('/assets/images/portfolio/mpce/portfolio-mpce-thumbnail.jpg')
 
-    .plus
-      font-size: 2em
-      line-height: 1em
-      padding: 5px 5px
-      border-radius: 50%
-      position: absolute
-      top: .5em
-      right: 1em
-      height: 1em
-      text-align: center
-      width: 1em
-      @include prefixer(transition, background .3s ease-out, ("webkit", "moz", "ms"))
-      &:before
-        content: 'learn more'
-        font-size: .4em
-        right: 4em
-        position: absolute
-        width: 5em
+    &-img
+        background-position: center
+        background-size: cover
+        height: $portfolio-blockheight
+        width: 50%
+        
+        
+        @media screen and (max-width: $tablet)
+            width: 100%
 
-.btn-inverse
-  display: table
-  margin: 4em auto
+        .access
+            // background: rgba(0, 0, 0, .15)
+            display: flex
+            height: 100%
 
-.portfolio-img
-  @include prefixer(transition, background .3s ease-out, ("webkit", "moz"))
-  &:hover
-    background-size: contain
-    p
-      color: white
+    &-description
+        align-self: flex-end
+        background: white
+        display: flex
+        flex-flow: column
+        margin: 0 auto 20px
+        padding: 2em
+        width: 80%
 
-.portfolio-boletosimples:hover
-  background: linear-gradient($color-aqua-alpha, $color-aqua-alpha), url("../images/portfolio/thumb/thumb-boleto-simples.jpg")
-.portfolio-leadwise:hover
-  background: linear-gradient($color-aqua-alpha, $color-aqua-alpha), url("../images/portfolio/thumb/thumb-leadwise.jpg")
-.portfolio-ianborges:hover
-  background: linear-gradient($color-aqua-alpha, $color-aqua-alpha), url("../images/portfolio/thumb/thumb-ian-borges.jpg")
-.portfolio-mobileaccess:hover
-  background: linear-gradient($color-aqua-alpha, $color-aqua-alpha), url("../images/portfolio/thumb/thumb-mobileaccess.jpg")
-.portfolio-mpce:hover
-  background: linear-gradient($color-aqua-alpha, $color-aqua-alpha), url("../images/portfolio/thumb/thumb-mpce.jpg")
-.portfolio-impulso:hover
-  background: linear-gradient($color-aqua-alpha, $color-aqua-alpha), url("../images/portfolio/thumb/thumb-impulso.jpg")
+        @media screen and (max-width: $mobile)
+            width: 65%
 
-// Portfolio Internal
+.portfolio-home
+    flex-flow: column wrap
+    max-height: calc(#{$portfolio-blockheight} * 2 + 5em)
+
+    @media screen and (max-width: $tablet)
+        max-height: fit-content
+        flex-flow: column        
+
+    .portfolio-img:first-of-type
+        height: calc(#{$portfolio-blockheight}  * 2)
+
+        @media screen and (max-width: $mobile)
+            height: $portfolio-blockheight
+
 .portfolio-internal
-  margin-top: 4em
-  img
-    width: 100%
-  p
-    font-size: 1.2em
-    line-height: 2em
-    margin: 2em auto
-    width: 60%
-    @media screen and (max-width: $mobile)
-      width: 100%
-    a
-      color: $color-black
-      text-decoration: underline
+    @extend .container
+    align-items: flex-start
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    &-full,
+    &-col
+        margin: 2em 0
+
+    &-full
+        display: block
+        width: 100%
+
+    &-col
+        width: 45%
+
+    &-img
+        width: 100%

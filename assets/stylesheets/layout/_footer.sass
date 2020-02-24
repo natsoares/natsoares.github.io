@@ -1,43 +1,15 @@
-.highlight
-  letter-spacing: 2px
-  margin: 10em 0
-  text-align: center
-  font-size: .9em
-  @media screen and (max-width: $mobile)
-    margin: 5em 0
-  a
-    margin-right: 2em
-    .social-icon
-      height: 4em
-      width: 4em
-      @include prefixer(transition, transform .2s ease-out, ("webkit", "moz", "ms"))
-      @include prefixer(transform, scale(1), ("webkit", "moz", "ms"))
-      &:hover
-        @include prefixer(transform, scale(1.1), ("webkit", "moz", "ms"))
-
 footer
-  background: $color-dark-bg
-  padding: 6em
-  position: relative
-  text-align: center
-  h4,p
-    color: $color-font-white
-  p
-    margin-bottom: 3em
-    letter-spacing: 2px
-  .contact
-    height: 15em
-    position: absolute
-    left: 15%
-    top: -52px
-    @media screen and (max-width: $mobile)
-      left: -25%
+    @extend .container
+    text-align: center
+    margin: 4em auto 2em
 
-.bye
-  display: block
-  font-size: 0.7em
-  margin: 2em 0
-  text-align: center
-  width: 100%
-  .heart
-    height: 1em
+    .paragraph
+        margin: 2em
+
+    .footer-social-link
+        display: inline-block
+        margin: 0 1em 2em
+
+    .bye
+        font-size: .85em
+        margin-top: 1em
