@@ -5,25 +5,28 @@
     align-items: flex-start
     display: flex
     flex-wrap: wrap
-    justify-content: normal
+    justify-content: space-between
 
   &-impulso
-    background: url('/assets/images/portfolio/impulso/portfolio-impulso-thumbnail.jpg')
+    background: url('/assets/images/portfolio/thumb/portfolio-img-impulso.png')
   
-  &-boletosimples
-    background: url('/assets/images/portfolio/boletosimples/portfolio-boletosimples-thumbnail.jpg')
+  &-smartguest
+    background: url('/assets/images/portfolio/thumb/portfolio-img-smartguest.png')
   
   &-leadwise
-    background: url('/assets/images/portfolio/leadwise/portfolio-leadwise-thumbnail.jpg')
+    background: url('/assets/images/portfolio/thumb/portfolio-img-leadwise.png')
 
-  &-mpce
-    background: url('/assets/images/portfolio/mpce/portfolio-mpce-thumbnail.jpg')
+  &-boletosimples
+    background: url('/assets/images/portfolio/thumb/portfolio-img-boleto-simples.png')
 
   &-img
-    background-position: center
-    background-size: cover
-    height: 45em
-    width: 50%
+    background-color: $bg-light
+    background-position: bottom
+    background-size: contain
+    background-repeat: no-repeat
+    height: 35em
+    margin-bottom: 1.5em
+    width: 49%
     @media screen and (max-width: $tablet)
       width: 100%
 
@@ -33,7 +36,6 @@
 
   &-description
     align-self: flex-start
-    background: white
     display: flex
     flex-flow: column
     margin: 20px auto
