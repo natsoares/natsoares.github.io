@@ -8,3 +8,5 @@ location: home
 {% include sections/home-portfolio.html %}
 
 {% include sections/about.html %}
+
+{% include sections/side-projects.html %}
