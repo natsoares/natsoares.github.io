@@ -17,6 +17,9 @@
       margin-bottom: 1em
       margin-right: 4em
 
+    h1
+      margin-bottom: 2em
+
     .ul-about
       display: flex
       flex-direction: column
@@ -28,11 +31,13 @@
         padding: .5em 0
 
   &-img
-    img
+    .img-noborder
       box-sizing: border-box
-      border: 4em solid $bg-light
       height: auto;
       width: 100%
       @media screen and (max-width: $mobile)
         margin-top: 2em
         width: 70%
+    .img-border
+      @extend .img-noborder
+      border: 4em solid $bg-light
