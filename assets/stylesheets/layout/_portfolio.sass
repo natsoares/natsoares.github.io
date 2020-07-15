@@ -1,84 +1,69 @@
-$portfolio-blockheight: 25em
-
 .portfolio
-    @extend .container
+  @extend .container
+
+  &-wrap
     align-items: flex-start
     display: flex
+    flex-wrap: wrap
     justify-content: normal
 
-    @media screen and (max-width: $mobile)
-        max-height: fit-content
+  &-impulso
+    background: url('/assets/images/portfolio/impulso/portfolio-impulso-thumbnail.jpg')
+  
+  &-boletosimples
+    background: url('/assets/images/portfolio/boletosimples/portfolio-boletosimples-thumbnail.jpg')
+  
+  &-leadwise
+    background: url('/assets/images/portfolio/leadwise/portfolio-leadwise-thumbnail.jpg')
 
-    &-impulso
-        background: url('/assets/images/portfolio/impulso/portfolio-impulso-thumbnail.jpg')
-    
-    &-boletosimples
-        background: url('/assets/images/portfolio/boletosimples/portfolio-boletosimples-thumbnail.jpg')
-    
-    &-leadwise
-        background: url('/assets/images/portfolio/leadwise/portfolio-leadwise-thumbnail.jpg')
+  &-mpce
+    background: url('/assets/images/portfolio/mpce/portfolio-mpce-thumbnail.jpg')
 
-    &-mpce
-        background: url('/assets/images/portfolio/mpce/portfolio-mpce-thumbnail.jpg')
-
-    &-img
-        background-position: center
-        background-size: cover
-        height: $portfolio-blockheight
-        width: 50%
-        
-        
-        @media screen and (max-width: $tablet)
-            width: 100%
-
-        .access
-            // background: rgba(0, 0, 0, .15)
-            display: flex
-            height: 100%
-
-    &-description
-        align-self: flex-end
-        background: white
-        display: flex
-        flex-flow: column
-        margin: 0 auto 20px
-        padding: 2em
-        width: 80%
-
-        @media screen and (max-width: $mobile)
-            width: 65%
-
-.portfolio-home
-    flex-flow: column wrap
-    max-height: calc(#{$portfolio-blockheight} * 2 + 5em)
-
+  &-img
+    background-position: center
+    background-size: cover
+    height: 45em
+    width: 50%
     @media screen and (max-width: $tablet)
-        max-height: fit-content
-        flex-flow: column        
+      width: 100%
 
-    .portfolio-img:first-of-type
-        height: calc(#{$portfolio-blockheight}  * 2)
+    .access
+      display: flex
+      height: 100%
 
-        @media screen and (max-width: $mobile)
-            height: $portfolio-blockheight
+  &-description
+    align-self: flex-start
+    background: white
+    display: flex
+    flex-flow: column
+    margin: 20px auto
+    padding: 2em
+    width: 80%
+
+    @media screen and (max-width: $mobile)
+      width: 65%
+
+    p
+      font-size: 1em
+      margin-top: 1em
 
 .portfolio-internal
-    @extend .container
-    align-items: flex-start
-    display: flex
-    flex-flow: row wrap
-    justify-content: space-between
+  @extend .container
+  align-items: flex-start
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
 
-    &-full,
-    &-col
-        margin: 2em 0
+  &-full,
+  &-col
+    margin: 2em 0
 
-    &-full
-        display: block
-        width: 100%
+  &-full
+    display: block
+    width: 100%
 
-    &-col
-        width: 45%
+  &-col
+    width: 45%
 
-    &-img
-        width: 100%
+  &-img
+    width: 100%

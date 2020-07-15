@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap')
 
-$font-default: 'Lato', Arial, Helvetica, sans-serif
+$font-default: 'Karla', Arial, Helvetica, sans-serif
 
 *
   -webkit-font-smoothing: antialiased
@@ -9,17 +9,18 @@ $font-default: 'Lato', Arial, Helvetica, sans-serif
   font-weight: 400
 
 h1, h2, h3, h4, h5, h6
+  color: $font-black
   font-family: $font-default
-  font-weight: 300
 
 .description-title
   font-size: 1.5em
   text-transform: capitalize
 
 .paragraph
-    font-size: 1.2em
-    line-height: 1.6em
-    margin: 1em 0
+  color: $font-black
+  font-size: 1.2em
+  line-height: 1.6em
+  margin: 1em 0
 
 a
   color: $black
@@ -29,13 +30,11 @@ b
   font-weight: 700
 
 h1
-  font-size: 3.5em
+  font-size: 2em
+  margin: 0
+  line-height: 1.3em
   @media screen and (max-width: $mobile)
     font-size: 2em
-
-h1, 
-  margin: 0
-  line-height: 1em
 
 h2
   font-size: 2.5em
@@ -43,6 +42,17 @@ h2
   @media screen and (max-width: $mobile)
     font-size: 1.5em
 
-p
+p, ul li, a
   color: $font-black
+  font-size: 1.2em
   line-height: 1.6em
+
+.section-title
+  color: $font-gray
+  font-size: 1em
+  font-weight: 700
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  &-logo
+    @extend .section-title
+    color: $black

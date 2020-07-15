@@ -1,0 +1,38 @@
+.about
+  @extend .container
+  @extend .block-space
+  display: flex
+  flex-direction: row
+  @media screen and (max-width: $mobile)
+    flex-direction: column
+
+  &-content,
+  &-img
+    width: 50%
+    @media screen and (max-width: $mobile)
+      width: 100%
+
+  &-content
+    p
+      margin-bottom: 1em
+      margin-right: 4em
+
+    .ul-about
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      height: 14em
+      margin: 0 1em
+
+      li
+        padding: .5em 0
+
+  &-img
+    img
+      box-sizing: border-box
+      border: 4em solid $bg-light
+      height: auto;
+      width: 100%
+      @media screen and (max-width: $mobile)
+        margin-top: 2em
+        width: 70%
