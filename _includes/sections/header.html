@@ -1,20 +1,16 @@
-<header id="home">
+<header id="home" class="header">
   <a class="section-title-logo" data-soffset="30" href="/">Nati Soares</a>
-  <ul class="menu">
-    {% if page.location == "home"  %}
-    <li><a class="scroll-link" data-soffset="30" href="#portfolio">Work</a></li>
-    {% else%}
-    <li><a class="scroll-link" data-soffset="30" href="/portfolio">Work</a></li>
-    {% endif %}
-    {% if page.location == "home" %}
-    <li><a class="scroll-link" data-soffset="30" href="#about">About</a></li>
-    {% else%}
-    <li><a class="scroll-link" data-soffset="30" href="/about">About</a></li>
-    {% endif %}
-    {% if page.location == "home" %}
-    <li><a class="scroll-link" data-soffset="30" href="#contact">Contact</a></li>
-    {% else%}
-    <li><a class="scroll-link" data-soffset="30" href="/contact">Contact</a></li>
-    {% endif %}
-  </ul>
+  {% include component/menu.html %}
 </header>
+
+<div>
+  <input type="checkbox" id="menu-responsive-toggle" name="" value=""/>
+  <div class="menu-responsive">
+      <label for="menu-responsive-toggle" class="menu-responsive-toggle-button" id="menu-responsive-toggle-close">
+          <div class="menu-responsive-icon"><span></span></div>
+      </label>
+      <div id="main-menu">
+          {% include component/menu.html %}
+      </div>
+  </div>
+</div>
