@@ -26,6 +26,8 @@
       flex-wrap: wrap
       height: 14em
       margin: 0 1em
+      @media screen and (max-width: $mobile)
+        height: auto
 
       li
         padding: .5em 0
@@ -37,7 +39,9 @@
       width: 100%
       @media screen and (max-width: $mobile)
         margin-top: 2em
-        width: 70%
+
     .img-border
       @extend .img-noborder
       border: 4em solid $bg-light
+      @media screen and (max-width: $mobile)
+        border: 3em solid $bg-light
