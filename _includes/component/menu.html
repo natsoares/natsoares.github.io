@@ -1,0 +1,17 @@
+<ul class="menu">
+  {% if page.location == "home"  %}
+  <li><a class="scroll-link" data-soffset="30" href="#portfolio">Work</a></li>
+  {% else%}
+  <li><a class="scroll-link" data-soffset="30" href="/portfolio">Work</a></li>
+  {% endif %}
+  {% if page.location == "home" %}
+  <li><a class="scroll-link" data-soffset="30" href="#about">About</a></li>
+  {% else%}
+  <li><a class="scroll-link" data-soffset="30" href="/about">About</a></li>
+  {% endif %}
+  {% if page.location == "home" %}
+  <li><a class="scroll-link" data-soffset="30" href="#contact">Contact</a></li>
+  {% else%}
+  <li><a class="scroll-link" data-soffset="30" href="/contact">Contact</a></li>
+  {% endif %}
+</ul>

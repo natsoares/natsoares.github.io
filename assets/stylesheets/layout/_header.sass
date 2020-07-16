@@ -1,10 +1,113 @@
 header
-    @extend .container
+  @extend .container
+  align-items: center
+  display: flex
+  justify-content: space-between
+  padding: 2em 0
+  width: 100%
+  @media screen and (max-width: $mobile)
+    padding: 1em 0
+  
+  .menu
+    display: flex
+    justify-content: space-between
+    list-style: none
+    @media screen and (max-width: $mobile)
+      display: none
+
+    li a
+      font-size: 1rem
+      margin: 0 1em
+
+// menu responsive
+.menu-responsive
+  display: none
+  
+  @media screen and (max-width: $mobile) 
+    display: block
+    height: 55px
+    position: absolute
+    right: 0
+    top: 2em
+    width: 75px
+    z-index: 9000
+  
+  #main-menu,
+    display: none
+ 
+#menu-responsive-toggle
+  display: none
+
+  &:checked + .menu-responsive
+    #main-menu
+      display: block
+      background: $font-gray
+      height: 100vh
+      margin: 0
+      padding: 1em 0 0 1em
+      position: fixed
+      right: 0
+      top: 0
+      width: 100vw
+      z-index: 2
+
+      .scroll-link
+        border: 0
+        color: white
+        display: block
+        font-size: 30px
+        padding: 20px 0
+        
+      .menu
+        flex-flow: column
+        list-style: none
+        justify-content: center
+        height: 90vh
+        margin: 0
+        padding: 2em
+        text-align: center
+
+    .menu-responsive-icon span
+      background: transparent
+    
+    .menu-responsive-icon span:before,
+    .menu-responsive-icon span:after
+      transform: rotate(45deg)
+      transform-origin: center
+      top: 0
+    
+    .menu-responsive-icon span:after
+      transform: rotate(-45deg)
+        
+.menu-responsive-icon
+  align-items: center
+  display: flex
+  height: 35px
+  width: 35px
+  
+  span,
+  span:before,
+  span:after
+    background: $black
+    content: ""
+    display: block
+    height: 2px
+    position: absolute
+    transition: all 0.3s ease-in-out
     width: 100%
     
-    .menu
-        display: flex
-        justify-content: space-evenly
-        list-style: none
-        margin: 0 0 4em 0
-        padding: 2em 0
+  span:before
+    top: 12px
+  
+  span:after
+    top: -12px
+    
+.menu-responsive-toggle-button
+    display: none
+
+    @media screen and (max-width: $mobile) 
+      display: block
+      position: absolute
+      right: 20px
+      top: 10px
+      z-index: 4

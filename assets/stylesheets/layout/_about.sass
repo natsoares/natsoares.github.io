@@ -1,0 +1,47 @@
+.about
+  @extend .container
+  @extend .block-space
+  display: flex
+  flex-direction: row
+  @media screen and (max-width: $mobile)
+    flex-direction: column
+
+  &-content,
+  &-img
+    width: 50%
+    @media screen and (max-width: $mobile)
+      width: 100%
+
+  &-content
+    p
+      margin-bottom: 1em
+      margin-right: 4em
+
+    h1
+      margin-bottom: 2em
+
+    .ul-about
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      height: 14em
+      margin: 0 1em
+      @media screen and (max-width: $mobile)
+        height: auto
+
+      li
+        padding: .5em 0
+
+  &-img
+    .img-noborder
+      box-sizing: border-box
+      height: auto;
+      width: 100%
+      @media screen and (max-width: $mobile)
+        margin-top: 2em
+
+    .img-border
+      @extend .img-noborder
+      border: 4em solid $bg-light
+      @media screen and (max-width: $mobile)
+        border: 3em solid $bg-light

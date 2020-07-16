@@ -12,4 +12,11 @@ $(document).ready(function () {
     return false;
   });
 
+  // Close Menu on Responsive
+  $(document).on("click", function (e) {
+    if (e.target.id == "menu-responsive-toggle-close") {
+      $("#menu-responsive-toggle").removeAttr("checked");
+    }
+  });
+
 });

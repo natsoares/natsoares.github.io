@@ -1,14 +1,27 @@
+%transition-smooth
+  transition: all 0.2s ease-out
+
 .btn-block
-    @extend .container
-    display: table
-    margin: 2em auto
+  @extend .container
+  display: table
+  margin: 2em auto
 
-    @media screen and (max-width: $mobile)
-        width: 100%
+  @media screen and (max-width: $mobile)
+    width: 100%
 
-    .btn-simple
-        float: right
-        font-weight: 600
+  .btn-simple
+    float: right
+    font-weight: 600
 
 .btn-simple
-    text-decoration: underline
+  text-decoration: underline
+
+.cta-underline
+  @extend %transition-smooth
+  color: $black
+  border-bottom: 2px solid $yellow
+  font-weight: 700
+  margin-top: 20px
+  width: fit-content
+  &:hover
+    color: $black-pure

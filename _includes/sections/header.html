@@ -1,11 +1,16 @@
-<header id="home">
-  <ul class="menu">
-    {% if page.location == "home" %}
-      <li><a class="scroll-link" data-soffset="30" href="#portfolio">Work</a></li>
-      {% elsif page.location == "portfolio" %}
-      <li><a class="scroll-link" data-soffset="30" href="/portfolio">Work</a></li>
-    {% endif %}
-    <li><a class="logo-link" data-soffset="30" href="/"><img src="/assets/images/logo/nati-soares.svg" alt="Nati Soares"></a></li>
-    <li><a class="scroll-link" data-soffset="30" href="#contact">Contact</a></li>
-  </ul>
+<header id="home" class="header">
+  <a class="section-title-logo" data-soffset="30" href="/">Nati Soares</a>
+  {% include component/menu.html %}
 </header>
+
+<div>
+  <input type="checkbox" id="menu-responsive-toggle" name="" value=""/>
+  <div class="menu-responsive">
+      <label for="menu-responsive-toggle" class="menu-responsive-toggle-button" id="menu-responsive-toggle-close">
+          <div class="menu-responsive-icon"><span></span></div>
+      </label>
+      <div id="main-menu">
+          {% include component/menu.html %}
+      </div>
+  </div>
+</div>
