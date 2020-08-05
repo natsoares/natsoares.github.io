@@ -3,12 +3,13 @@
   @extend .block-space
   display: flex
   flex-direction: row
+  justify-content: space-between
   @media screen and (max-width: $mobile)
     flex-direction: column
 
   &-content,
   &-img
-    width: 50%
+    width: 49%
     @media screen and (max-width: $mobile)
       width: 100%
 
@@ -19,6 +20,9 @@
 
     h1
       margin-bottom: 2em
+
+    .cta-space
+      margin-right: 2em
 
     .ul-about
       display: flex
@@ -42,6 +46,7 @@
 
     .img-border
       @extend .img-noborder
+      @extend %border-radius
       border: 4em solid $bg-light
       @media screen and (max-width: $mobile)
         border: 3em solid $bg-light

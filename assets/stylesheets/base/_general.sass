@@ -12,6 +12,19 @@
     margin: 2em auto
 
 .block-space
-  padding-top: 5em
+  padding-top: 10em
   @media screen and (max-width: $mobile)
     padding-top: 2em
+
+%border-radius
+  border-radius: .5em 
+
+%transition-smooth
+  transition: all 0.2s ease-out
+
+@mixin transform($property)
+    -webkit-transform: $property
+    -moz-transform: $property
+    -ms-transform: $property
+    -o-transform: $property
+    transform: $property
